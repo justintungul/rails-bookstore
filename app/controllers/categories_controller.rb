@@ -28,6 +28,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
+    @categories = Category.all
+    @books = @category.books
   end
 
   private
